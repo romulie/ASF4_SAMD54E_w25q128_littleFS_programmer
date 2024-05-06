@@ -66,7 +66,7 @@ int main(void)
 
     /* uart init */
     uart_init(115200); // TODO: uart_init() doesn't set baud rate now (it is set-up through Atmel Start)
-    uart_print("w25qxx: welcome to w25qxx programmer.\n");
+    uart_print("w25qxx: welcome to w25qxx programmer. Send any char to run.\n\n");
 
     while (1)
     {
@@ -77,12 +77,14 @@ int main(void)
 
             // set-up flash chip
             W25qxx_Startup();
-            uart_print("w25qxx: flash chip startup() OK!\n");
+            uart_print("Programmer: flash chip w25qxx startup() OK!\n");
             // set-up LittleFS here
             Littlefs_Startup();
-            uart_print("LittleFS: filesystem startup() OK!\n");
+            uart_print("Programmer: filesystem LittleFS startup() OK!\n");
 
-            uart_print("w25qxx: go over again.\n");
+            //printf("Hello, World/r/n");
+
+            uart_print("Programmer: Send any char to go over again.\n\n");
             uart_flush();
         }
         delay_ms(100);

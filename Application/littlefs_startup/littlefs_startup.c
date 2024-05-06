@@ -126,7 +126,7 @@ uint8_t Littlefs_Startup(void)
      {
          lfs_format(&lfs, &cfg);
          lfs_mount(&lfs, &cfg);
-         uart_print("-----------------ERROR: could not mount littlefs!\n");
+         uart_print("littlefs: ERROR - could not mount littlefs!\n");
      }
 
      // read current count
@@ -146,7 +146,7 @@ uint8_t Littlefs_Startup(void)
      lfs_unmount(&lfs);
 
      // print the boot count
-     uart_print("littlefs boot_count: %d\n", boot_count);
+     uart_print("littlefs: boot_count: %d\n", boot_count);
 
      return 0;
  }

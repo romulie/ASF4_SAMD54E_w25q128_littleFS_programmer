@@ -51,7 +51,7 @@ uint8_t W25qxx_Startup()
         w25qxx_interface_debug_print(w25q128_handle.extra, "w25qxx: chip is %s.\n", info.chip_name);
         w25qxx_interface_debug_print(w25q128_handle.extra, "w25qxx: manufacturer is %s.\n", info.manufacturer_name);
         w25qxx_interface_debug_print(w25q128_handle.extra, "w25qxx: interface is %s.\n", info.interface);
-        w25qxx_interface_debug_print(w25q128_handle.extra, "w25qxx: driver version is %d.%d.\n", info.driver_version / 1000, (info.driver_version % 1000) / 100);
+        w25qxx_interface_debug_print(w25q128_handle.extra, "w25qxx: driver version is %d.%d.\n\n", info.driver_version / 1000, (info.driver_version % 1000) / 100);
     }
     
     /* set chip type */
